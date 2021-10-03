@@ -1,7 +1,7 @@
 # Личный проект «Кексобукинг»
 
 * Студент: [Владимир Богов](https://up.htmlacademy.ru/javascript/24/user/114050).
-* Наставник: `Алёна Сиприкова`.
+* Наставник: [Алёна Сиприкова](https://htmlacademy.ru/profile/asiprikova).
 
 ---
 
