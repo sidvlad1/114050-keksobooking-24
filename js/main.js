@@ -1,26 +1,24 @@
-function randomNumber (startNumber, endNumber) {
-  if (startNumber <0 || endNumber <0) {
-    throw 'число должно быть больше нуля';
+function getRandomNumber (startNumber = 0, endNumber = 0) {
+  if (endNumber < startNumber) {
+    return 0;
   }
-  if (startNumber >= endNumber) {
-    throw 'первоначальное число должно быть меньше второго';
+  if (startNumber < 0 || endNumber < 0) {
+    return 0;
   }
-  const min = Math.ceil(startNumber);
-  const max = Math.floor(endNumber);
-  return Math.floor(Math.random() * (max - min)) + min;
+  return Math.floor(Math.random() * (endNumber - startNumber)) + startNumber;
 }
 
-function randomFloatNumber (startNumber, endNumber, floatingNumber) {
-  if (startNumber <0 || endNumber <0) {
-    throw 'число должно быть больше нуля';
+function getRandomFloatNumber (startNumber = 0, endNumber = 0, floatingNumber = 5) {
+  let random;
+  if (endNumber < startNumber) {
+    random = 0;
   }
-  if (startNumber >= endNumber) {
-    throw 'первоначальное число должно быть меньше второго';
+  if (startNumber < 0 || endNumber < 0) {
+    random = 0;
   }
-  const random = Math.random() * (endNumber - startNumber) + startNumber;
+  random = Math.random() * (endNumber - startNumber) + startNumber;
   return random.toFixed(floatingNumber);
 }
 
-
-randomFloatNumber (1, 1, 2);
-randomNumber (0, 5);
+getRandomFloatNumber (1, 1, 2);
+getRandomNumber (0, 5);
