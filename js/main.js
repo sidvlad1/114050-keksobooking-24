@@ -22,3 +22,23 @@ function getRandomFloatNumber (startNumber = 0, endNumber = 0, floatingNumber = 
 
 getRandomFloatNumber (1, 1, 2);
 getRandomNumber (0, 5);
+
+const author = {
+  avatar: 'img/avatars/user{{01}}.png',
+};
+
+const offer = {
+  title: 'номер в средиземноморском стиле',
+  address: '{{location.lat}}, {{location.lng}}',
+  price: '500',
+  type: 'описание объекта',
+  rooms: '1',
+  guests: '2',
+  checkin: '12:00',
+  checkout: 'описание объекта',
+  features: '{{wifi}},{{dishwasher}},{{parking}},{{washer}}',
+  description: 'красивое место',
+  photos: 'описание объекта',
+};
+
+const location = {lat, lng};
